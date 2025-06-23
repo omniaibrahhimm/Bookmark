@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <!-- favicons -->
+     <link rel="shortcut icon" href="./imgs/icons8-add-bookmark-64.png" type="image/x-icon">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <!-- end google fonts -->
+    <!-- start style sheets -->
+    <link rel="stylesheet" href="./style/all.min.css">
+    <link rel="stylesheet" href="./style/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/style.css">
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="container pb-5">
+           <div class="bookmark-title">
+             <h2 class=" title fw-bolder text-center display-5 pt-5">
+                Bookmarker</h2>
+            <hr>
+         <div class="bookmark-body w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4">
+          <h3>
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h3>
+         
+        </div>
+           </div>
+
+            <div id="contact-form" class="form-container ">
+
+                <div class=" mb-4">
+                    <label for="SiteName" class="pb-2 fw-semibold">Site Name</label>
+                    <input type="text" class="form-control" id="SiteName" placeholder="SiteName"
+                        onkeydown="validateContactName()">
+                    <small class="alert alert-danger d-none py-1" id="nameerror">name isnot valid </small>
+                </div>
+                <div class=" mb-4">
+                    <label for="SiteURL"  class="pb-2 fw-semibold">Site URL</label>
+                    <input type="url" class="form-control" id="SiteURL" placeholder="Website URL">
+                </div>
+                <button class="btn btn-danger py-2 px-5 text-center m-auto d-block" id="addBtn" onclick="addSite()">
+                    Submit</button>
+            </div>
+
+
+            <div class="contacts-container bg-white">
+                <div class="table-container m-5">
+                    <table id="contacts-table" class="table">
+                        <thead class="bg-secondary text-white text-capitalize ">
+                            <tr>
+                                <th scope="col">Index</th>
+                                <th scope="col">Website</th>
+                                <th scope="col">Visit</th>
+                                <th scope="col">delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="t-body">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

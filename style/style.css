@@ -1,0 +1,43 @@
+body .main{
+background-color: #F7ECDE;
+  font-family: "PT Sans Caption", sans-serif;
+}
+h2 {
+    color: #352e28;
+      font-family: "Pacifico", cursive;
+      z-index: 0;
+      position: relative;
+
+}
+.bookmark-body h3 {
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.main h2::before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 20%;
+    bottom: 5px;
+    background-color: #fec260;
+    transition: height 350ms;
+    z-index: -1;
+}
+.main h2:hover::before{
+    height: 40%;
+}
+.main hr {
+      border: none;
+      border-top: 3px dotted black;
+      margin: 40px auto;
+      width: 100%;
+    }
+
+button .addBtn{
+    color:#D1512D ;
+}
+
+    
